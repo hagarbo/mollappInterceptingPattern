@@ -6,30 +6,29 @@ import edu.hagarbo.intercepting.filtros.Filtro;
 import edu.hagarbo.intercepting.targets.Target;
 
 public class Tarefas {
-
-    private Target target;
+    private Target target = null;
     private ArrayList<Filtro> filtros = new ArrayList<>();
 
-    public Tarefas() {
+    Tarefas() {
     }
 
-    public ArrayList<Filtro> getTarefas() {
+    ArrayList<Filtro> getTarefas() {
         return this.filtros;
     }
 
-    public Target getTarget() {
+    Target getTarget() {
         return this.target;
     }
 
-    public void engadirTarefa(Filtro filtro) {
+    void engadirTarefa(Filtro filtro) {
         this.filtros.add(filtro);
     }
 
-    public void execucion(String s) {
+    void execucion(String s) {
         this.filtros.forEach(e -> e.execucion(s));
     }
 
-    public void setTarget(Target target) {
+    void setTarget(Target target) {
         this.target = target;
     }
 

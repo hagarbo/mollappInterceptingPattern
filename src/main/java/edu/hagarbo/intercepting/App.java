@@ -1,5 +1,6 @@
 package edu.hagarbo.intercepting;
 
+import edu.hagarbo.intercepting.clients.Client;
 import edu.hagarbo.intercepting.clients.Mollapp;
 import edu.hagarbo.intercepting.filtros.Autenticacion;
 import edu.hagarbo.intercepting.filtros.Autorizacion;
@@ -29,7 +30,7 @@ public final class App {
          * ejecute las tareas programades y
          * envie el mensaje al sistema.
          */
-        Mollapp mollapp = new Mollapp();
+        Client mollapp = new Mollapp();
         mollapp.setProgramadorTarefas(programadorTarefas);
         mollapp.enviarPeticion("Francesc");
     }

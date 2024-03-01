@@ -5,12 +5,11 @@ import edu.hagarbo.intercepting.targets.Target;
 
 public class ProgramadorTarefas {
 
-    private Target target;
     private Tarefas tarefas;
 
     public ProgramadorTarefas(Target target) {
-        this.target = target;
         this.tarefas = new Tarefas();
+        this.tarefas.setTarget(target);
     }
 
     public Tarefas getTarefas() {
@@ -23,6 +22,6 @@ public class ProgramadorTarefas {
 
     public void executarTarefas(String s) {
         this.tarefas.execucion(s);
-        this.target.execucion(s);
+        this.tarefas.getTarget().execucion(s);
     }
 }
